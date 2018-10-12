@@ -21,14 +21,23 @@ public class Livro {
 	}
 
 	public void setTitulo(String titulo) {
+		if(titulo == "" | titulo == null) {
+		 
+		}
 		this.titulo = titulo;
 	}
-
+	
 	public String getAutor() {
 		return autor;
 	}
 
 	public void setAutor(String autor) {
+		if(autor =="" | autor == null) {
+			throw new RuntimeException("Autor invalido");
+		}
 		this.autor = autor;
 	}
+	
+	
+	
 }
